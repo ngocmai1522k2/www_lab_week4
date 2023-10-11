@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="lop" class="vn.edu.iuh.fit.objectInjection.Class_">
+        <property name="classId" value="DHTH15A"/>
+        <property name="className" value="Lop DHTH15A"/>
+
+    </bean>
+<!--    Injection by setter-->
+    <bean id="st1" class="vn.edu.iuh.fit.objectInjection.Student_">
+        <property name="id" value="1001"/>
+        <property name="name" value="Than Thi Det"/>
+        <property name="class_" ref="lop"/>
+
+    </bean>
+<!--    Injection by Constructor-->
+    <bean id="st2" class="vn.edu.iuh.fit.objectInjection.Student_">
+        <constructor-arg name="id" value="1002"/>
+        <constructor-arg name="name" value="Tran Thi Men"/>
+        <constructor-arg name="class_" ref="lop"/>
+    </bean>
+</beans>
